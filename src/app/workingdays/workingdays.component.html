@@ -1,0 +1,23 @@
+<app-doctornav></app-doctornav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+          <h1>Add working days</h1>
+         <div class="mt-5">
+         
+          <form action="" (ngSubmit)=onSubmit(f) #f="ngForm" ngNativeValidate>
+            <table>
+              <tr><th></th><td><input type="hidden" name="doctor" [(ngModel)]=user ngModel></td></tr>
+              <tr><th>Date:</th><td><input type="date" name="date" id="" class="form-control" ngModel required></td></tr>
+              <tr><th>Time:</th><td><input type="text" name="time" class="form-control" ngModel required></td></tr>
+              <tr><th></th><td><button type="submit" class="btn btn-primary">ADD</button></td></tr>
+            </table>
+          </form>
+          
+        </div>     
+       </div>
+    </div>  
+  </div>
+</section> 

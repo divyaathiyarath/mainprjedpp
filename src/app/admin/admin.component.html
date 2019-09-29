@@ -1,0 +1,26 @@
+<app-adminnav></app-adminnav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+         <div class="mt-5">
+           <h1>Register Doctor</h1>
+          <form (ngSubmit)=onSubmit(f) #f="ngForm" ngNativeValidate>
+          <table>
+            <tr><td>Name:</td><td><input type="text" name="name" class="form-control" ngModel required></td></tr>
+            <tr><td>Qualificaion:</td><td><input type="text" name="qualification" id="" class="form-control" ngModel required></td> </tr>
+            <tr><td>Category:</td><td><input type="text" name="category" id="" class="form-control" ngModel required></td> </tr>
+            <tr><td>Mail id:</td><td><input type="email" [(ngModel)]="mailid" name="mailid" id="" #mail class="form-control" (blur)="validFunction(f)" required></td></tr>
+            <tr><td>Phone:</td><td><input type="number" name="phone" id="" class="form-control" ngModel required></td></tr>
+             <tr><td>Password:</td><td><input type="text" name="password" class="form-control" ngModel required></td></tr>
+             <!-- <tr><td>Upload photo:</td><td><input type="file" name="image" id="" class="form-control-file" (change)="onFileSelected($event)" accept="/image/*" ngModel></td></tr> -->
+             <tr><td></td><td><button type="submit" class="btn btn-primary">Submit</button></td></tr>
+            </table>
+          </form>
+        </div>     
+       </div>
+    </div>  
+  </div>
+</section> 
+<!-- accept="/image/*" -->

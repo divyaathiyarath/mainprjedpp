@@ -1,0 +1,39 @@
+<app-doctornav></app-doctornav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+        <h1>Prescription</h1>
+         <div class="mt-5">
+         
+           <form action="" (ngSubmit)=onSubmit(f) #f="ngForm" ngNativeValidate>
+              <table>
+                <tr>
+         <th> Patient:</th> <input type=text list=browsers class="form-control" name="patient" (blur)="getPrescription(f)" required>
+             <datalist id=browsers>
+               <td *ngFor="let data of myData">
+                <option> {{data.mailid}}
+                <!-- <option> IE9 -->
+                  </td>
+             </datalist>
+            </tr>
+            <tr *ngFor="let data of pData">
+           <th>prescription:</th><td><textarea name="prescription" id="" cols="30" rows="10" class="form-control" [(ngModel)]=data.prescription>{{data.prescription}} required</textarea></td>
+            </tr>
+            <tr *ngIf="pData.length==0">
+                <th>prescription:</th><td><textarea name="prescription" id="" cols="30" rows="10" class="form-control" [(ngModel)]=prescription required></textarea></td>
+            </tr>
+           <!-- <tr *ngFor="let data of pData">
+            
+             <td>{{data.prescription}}</td>
+            </tr> -->
+            <tr><td></td><td><button type="submit" class="btn btn-primary">Submit</button></td></tr>
+             
+            </table>
+           </form>
+        </div>     
+       </div>
+    </div>  
+  </div>
+</section> 

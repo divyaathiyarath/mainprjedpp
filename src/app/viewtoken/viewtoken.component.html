@@ -1,0 +1,22 @@
+<app-patientnav></app-patientnav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+         <div class="mt-5">
+          <table class="table">
+            <tr>
+             <th>Date</th><th>Time</th><th>Token</th>
+             </tr>
+             <tr>
+            <tr *ngFor="let data of myData">
+              <td>{{data.date}}</td><td>{{data.time}}</td><td>{{data.token}}</td>
+             </tr>
+ 
+          </table>
+          </div>     
+        </div>
+        </div>  
+        </div>
+  </section> 

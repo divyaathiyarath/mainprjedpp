@@ -1,0 +1,18 @@
+<app-patientnav></app-patientnav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+         <div class="mt-5">
+       <h1>Prescription</h1>
+       <div class="card" *ngFor="let data of myData">
+        <div class="card-body">{{data.prescription}}</div>
+      </div>
+         
+        </div>     
+       </div>
+    </div>  
+  </div>
+</section> 
+

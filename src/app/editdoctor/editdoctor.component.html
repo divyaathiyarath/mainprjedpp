@@ -1,0 +1,24 @@
+<app-doctornav></app-doctornav>
+<section class="hero-wrap js-fullheight" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5"> 
+        <h1>Edit profile</h1>
+         <div class="mt-5">  
+          <form action="" (ngSubmit)=onSubmit() #f="ngForm">
+          <table *ngFor="let data of myData">
+            <tr><input type="hidden" name="id" [(ngModel)]=data._id></tr>
+            <tr><td>Name:</td><td><input type="text" name="name" [(ngModel)]=data.name class="form-control"></td></tr>
+            <tr><td>Qualification:</td><td><input type="text" name="qualification" [(ngModel)]=data.qualification class="form-control"></td> </tr>
+            <tr><td>Category:</td><td><input type="text" name="category" [(ngModel)]=data.category class="form-control"></td></tr>
+            <!-- <tr><td>Mail id:</td><td>{{data.mailid}}</td></tr> -->
+            <tr><td>Phone:</td><td><input type="text" name="phone" [(ngModel)]=data.phone class="form-control"></td></tr>
+            <tr><td></td><td><button type="submit" class="btn btn-primary">UPDATE</button></td></tr>
+            </table>
+          </form>
+        </div>     
+       </div>
+    </div>  
+  </div>
+</section> 
