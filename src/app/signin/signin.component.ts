@@ -14,16 +14,7 @@ export class SigninComponent implements OnInit {
 onSubmit(data:NgForm)
 {
   console.log(data.value);
-  if(data.value.username=="admin@gmail.com" && data.value.password=="admin")
-      {
-        this.router.navigateByUrl('admin');
-        var username="admin@gmail.com";
-        localStorage.setItem('user',username);
-        localStorage.setItem('loggedIn','true');
-      }
-      else
-      {
-  this.apiService.getLogData(data.value).subscribe((response)=>{
+    this.apiService.getLogData(data.value).subscribe((response)=>{
     if(response[0]!=null)
     {
       console.log("response");
@@ -44,7 +35,7 @@ onSubmit(data:NgForm)
         this.router.navigateByUrl('admin');
       }
 
-      if(response[0].utype=='doctor')
+      if(response[0].utype=='doctor' || data.value.username=="admin@gmail.com" && data.value.password=="admin")
       {
         this.router.navigateByUrl('doctor');
       }
@@ -56,7 +47,7 @@ onSubmit(data:NgForm)
       alert("Invalid username or password");
     }
   })
-}
+
 
 }
 
