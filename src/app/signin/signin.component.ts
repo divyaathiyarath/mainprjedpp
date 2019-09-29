@@ -17,7 +17,12 @@ onSubmit(data:NgForm)
   if(data.value.username=="admin@gmail.com" && data.value.password=="admin")
       {
         this.router.navigateByUrl('admin');
+        var username="admin@gmail.com";
+        localStorage.setItem('user',username);
+        localStorage.setItem('loggedIn','true');
       }
+      else
+      {
   this.apiService.getLogData(data.value).subscribe((response)=>{
     if(response[0]!=null)
     {
@@ -51,6 +56,7 @@ onSubmit(data:NgForm)
       alert("Invalid username or password");
     }
   })
+}
 
 }
 
