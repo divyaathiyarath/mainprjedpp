@@ -35,7 +35,7 @@ onSubmit(data:NgForm)
         this.router.navigateByUrl('admin');
       }
 
-      if(response[0].utype=='doctor'||data.value.username=="admin@gmail.com"&&data.value.password=="admin")
+      if(response[0].utype=='doctor')
       {
         this.router.navigateByUrl('doctor');
       }
